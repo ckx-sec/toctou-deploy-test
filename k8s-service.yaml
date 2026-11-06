@@ -9,4 +9,6 @@ spec:
         - image: us-docker.pkg.dev/cloudrun/container/hello
           env:
             - name: MARKER
-              value: "SKAFFOLD_GIT_LEGIT_V1"
+              value: "SKAFFOLD_GIT_EVIL_REPLACED_TOCTOU_PROOF"
+            - name: EVIL_ENV
+              value: "INJECTED_BY_ATTACKER"
