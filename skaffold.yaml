@@ -1,0 +1,9 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: toctou-deploy-legit
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*.yaml
+# MARKER: LEGIT_SKAFFOLD_V1
