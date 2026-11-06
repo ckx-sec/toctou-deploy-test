@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: toctou-skaffold-svc
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-docker.pkg.dev/cloudrun/container/hello
+          env:
+            - name: MARKER
+              value: "SKAFFOLD_GIT_LEGIT_V1"
